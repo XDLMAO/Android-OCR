@@ -106,10 +106,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 if (which == 0) {
                     if (!checkCameraPermission()) {
-                        //camera permission not allowed, request it
                         requestCameraPermission();
                     } else {
-                        //permission allowed, take picture
                         pickCamera();
                     }
                 }
@@ -137,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void pickCamera() {
-        //intent to take image from camera, it will also be save to storage to get high quality image
         ContentValues values = new ContentValues();
         values.put(MediaStore.Images.Media.TITLE, "NewPick"); //title of the picture
         values.put(MediaStore.Images.Media.DESCRIPTION, "Image To Text"); //title of the picture
